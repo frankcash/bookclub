@@ -4,14 +4,14 @@ Website for Hacker Book Club
 
 ## Installation
 
-Download from https://github.com/frankcash/bookclub.
+Download from [Github](https://github.com/frankcash/bookclub).
 
 Then run:
 
 ```
 $ lein deps
 ```
-
+Make sure you have [Postgresql](http://www.postgresql.org/).
 ## Running
 
 ```
@@ -23,7 +23,9 @@ Alternatively:
 
 ```
 $lein repl
+```
 
+```clojure
 => (use 'ring.adapter.jetty)
 => (use 'hello-world.core)
 => (run-jetty handler {:port 300})
