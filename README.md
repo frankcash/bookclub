@@ -15,6 +15,13 @@ $ lein deps
 ## Running
 
 ```
+$ lein ring server-headless
+```
+
+
+Alternatively:
+
+```
 $lein repl
 
 => (use 'ring.adapter.jetty)

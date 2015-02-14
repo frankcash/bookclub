@@ -6,7 +6,9 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [ring/ring-core "1.3.2"]
                  [ring/ring-jetty-adapter "1.3.2"]
-                 [compojure "1.3.1"]]
+                 [compojure "1.3.1"]
+                 [org.clojure/java.jdbc "0.3.2"]
+                 [postgresql "9.1-901.jdbc4"]]
   :main ^:skip-aot bookclub.core
   :plugins [[lein-ring "0.7.1"]]
   :target-path "target/%s"
