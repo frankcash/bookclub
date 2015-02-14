@@ -18,19 +18,6 @@ Make sure you have [Postgresql](http://www.postgresql.org/).
 $ lein ring server-headless
 ```
 
-
-Alternatively:
-
-```
-$lein repl
-```
-
-```clojure
-=> (use 'ring.adapter.jetty)
-=> (use 'hello-world.core)
-=> (run-jetty handler {:port 300})
-```
-
 ## License
 
 Copyright © 2015 Frank Cash
