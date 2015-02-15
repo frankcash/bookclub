@@ -9,7 +9,8 @@
                  [compojure "1.3.1"]
                  [org.clojure/java.jdbc "0.3.2"]
                  [postgresql "9.1-901.jdbc4"]
-                 [ring/ring-defaults "0.1.4"]]
+                 [ring/ring-defaults "0.1.4"]
+                 [cheshire "5.4.0"]]
   :plugins [[lein-ring "0.9.1"]]
   :ring {:handler bookclub.core/app}
   :target-path "target/%s"

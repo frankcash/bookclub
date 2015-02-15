@@ -2,7 +2,8 @@
   (:require [compojure.core :refer [defroutes GET]]
             [compojure.route :as route]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
-            [ring.adapter.jetty :as ring]))
+            [ring.adapter.jetty :as ring]
+            [cheshire.core :as json]))
 
 ; (defn -main
 ;   "I don't do a whole lot ... yet."
@@ -14,8 +15,13 @@
 ;     :headers {"Content-Type" "text/html"}
 ;     :body "Hello World"})
 
+(defn json-response [data & [status]]
+  {:status (or status 200)
+    :headers {"Content-Type" "application/hal+json; charset=utf-8"}
+    :body (json/generate-string data)})
+
 (defroutes routes
-  (GET "/" [] "<h2>Hello World</h2>")
+  (GET "/" request (json-response {:greetings (str "Greetings" "foo")}))
   (route/resources "/")
   (route/not-found "Not Found"))
 
