@@ -1,8 +1,7 @@
 (ns bookclub.core
   (:require [compojure.core :refer [defroutes GET]]
             [compojure.route :as route]
-            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
-            [ring.adapter.jetty :as ring]))
+            [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
 
 ; (defn -main
 ;   "I don't do a whole lot ... yet."
