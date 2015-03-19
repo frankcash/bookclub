@@ -25,6 +25,8 @@
   (route/resources "/")
   (GET "/foo" request (json-response {:greetings (str "this is foo") }))
   (route/resources "/foo")
+  (GET "/book/:id" [id] (json-response {:foo (str "dynamic route: " id)}))
+  (route/resources "/book:id")
   (route/not-found "Not Found"))
 
 ; Might want to use `api-defaults` instead of `site-defaults`, depending on
