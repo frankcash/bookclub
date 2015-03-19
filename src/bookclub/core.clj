@@ -23,6 +23,8 @@
 (defroutes routes
   (GET "/" request (json-response {:greetings (str "Greetings" "foo")}))
   (route/resources "/")
+  (GET "/foo" request (json-response {:greetings (str "this is foo") }))
+  (route/resources "/foo")
   (route/not-found "Not Found"))
 
 ; Might want to use `api-defaults` instead of `site-defaults`, depending on
