@@ -18,6 +18,10 @@ Make sure you have [Postgresql](http://www.postgresql.org/).
 $ lein ring server-headless
 ```
 
+## Find Us Elsewhere
+
+[Facebook](https://www.facebook.com/groups/1283193408435026/)
+
 ## License
 
 Copyright © 2015 Frank Cash
